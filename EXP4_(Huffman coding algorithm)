@@ -1,0 +1,98 @@
+
+#include <iostream>
+#include <queue>
+#include <vector>
+using namespace std;
+
+// Node of Huffman Tree
+struct Node {
+    char data;
+    int freq;
+    Node *left, *right;
+
+    Node(char data, int freq) {
+        this->data = data;
+        this->freq = freq;
+        left = right = nullptr;
+    }
+};
+
+// Comparator for min-priority queue
+struct Compare {
+    bool operator()(Node* a, Node* b) {
+        return a->freq > b->freq;
+    }
+};
+
+// Generate Huffman Codes
+void generateCodes(Node* root, string code) {
+    if (root == nullptr)
+        return;
+
+    // If leaf node, print character and its code
+    if (root->left == nullptr && root->right == nullptr) {
+        cout << root->data << " : " << code << endl;
+        return;
+    }
+
+    generateCodes(root->left, code + "0");
+    generateCodes(root->right, code + "1");
+}
+
+// Build Huffman Tree
+void huffmanCoding(vector<char>& characters,
+                   vector<int>& frequencies) {
+
+    priority_queue<Node*, vector<Node*>, Compare> minHeap;
+
+    // Insert all characters into min heap
+    for (int i = 0; i < characters.size(); i++) {
+        minHeap.push(new Node(characters[i], frequencies[i]));
+    }
+
+    // Build Huffman Tree
+    while (minHeap.size() > 1) {
+
+        Node* left = minHeap.top();
+        minHeap.pop();
+
+        Node* right = minHeap.top();
+        minHeap.pop();
+
+        // Create new internal node
+        Node* parent = new Node('$',
+                                left->freq + right->freq);
+
+        parent->left = left;
+        parent->right = right;
+
+        minHeap.push(parent);
+    }
+
+    // Root of Huffman Tree
+    Node* root = minHeap.top();
+
+    // Generate codes
+    cout << "Huffman Codes:\n";
+    generateCodes(root, "");
+}
+
+int main() {
+
+    vector<char> characters = {
+        'a', 'b', 'c', 'd', 'e', 'f'
+    };
+
+    vector<int> frequencies = {
+        5, 9, 12, 13, 16, 45
+    };
+
+    huffmanCoding(characters, frequencies);
+
+    return 0;
+}
+
+
+
+
+
