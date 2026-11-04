@@ -8,6 +8,7 @@ The objective of these experiments is to understand different algorithm design t
 Each experiment contains a separate implementation of the given problem statement.
 
 🧪 List of Experiments
+
 Experiment 1: Sorting Algorithms
 
 Aim: To implement Merge Sort, Quick Sort, Bubble Sort, Selection Sort, and Heap Sort using arrays as a data structure and analyze their time complexity.
@@ -19,6 +20,7 @@ Quick Sort
 Bubble Sort
 Selection Sort
 Heap Sort
+
 Experiment 2: Searching Algorithms
 
 Aim: To implement Linear Search and Binary Search and analyze their time complexity.
@@ -27,13 +29,16 @@ Algorithms covered:
 
 Linear Search
 Binary Search
+
 Experiment 3: Strassen's Matrix Multiplication
 
 Aim: To implement Strassen's Matrix Multiplication algorithm and analyze its time complexity.
 
+
 Experiment 4: Huffman Coding
 
 Aim: To implement Huffman Coding and analyze its time complexity.
+
 
 Experiment 5: Minimum Spanning Tree (MST)
 
@@ -43,6 +48,7 @@ Algorithms covered:
 
 Prim's Algorithm
 Kruskal's Algorithm
+
 Experiment 6: Dijkstra's Algorithm
 
 Aim: To implement Dijkstra's algorithm for finding the shortest path in a weighted graph and analyze its time complexity.
@@ -68,6 +74,7 @@ Algorithms covered:
 Naive String Matching
 Rabin-Karp Algorithm
 Knuth-Morris-Pratt (KMP) Algorithm
+
 Experiment 11: Floyd-Warshall Algorithm
 
 Aim: To implement the Floyd-Warshall algorithm for finding all-pairs shortest paths and analyze its time complexity.
@@ -82,7 +89,9 @@ Data Structures: Arrays, Graphs, Trees, Matrices
 Algorithmic Techniques: Divide and Conquer, Greedy Method, Dynamic Programming, Backtracking
 IDE/Compiler: VS Code / Code::Blocks / GCC
 💻 How to Run the Programs
+
 Clone this repository:
+
 bash
 git clone https://github.com/GovindSharma06/DAA_LAB.git
 
