@@ -84,7 +84,7 @@ IDE/Compiler: VS Code / Code::Blocks / GCC
 💻 How to Run the Programs
 Clone this repository:
 bash
-git clone https://github.com/your-username/DAA-Lab.git
+git clone https://github.com/GovindSharma06/DAA_LAB.git
 
 Navigate to the project directory:
 bash
